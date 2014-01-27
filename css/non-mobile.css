@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 768px) {
+/* 768 Styles */
+
+/* ------------------------------------
+ Framework
+------------------------------------- */
+
+/* ------------------------------------
+ Header
+------------------------------------- */
+ul.myaccount a em { display: inline-block; font-style: normal; }
+
+/* ------------------------------------
+ Bookmarks
+------------------------------------- */
+h3.cat { width: 98.5%; }
+
+/* ------------------------------------
+ Content
+------------------------------------- */
+.content { width: 60%; }
+
+/* ------------------------------------
+ Sidebar
+------------------------------------- */
+.sidebar { float: right; width: 250px; margin: 15px 0 25px 25px; padding: 0; clear: none; overflow: hidden; }
+.sidebar h3 { -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+
+/* ------------------------------------
+ Footer
+------------------------------------- */
+	
+}
+@media only screen and (min-width: 1024px) {
+/* 1024 Styles */
+.content { width: 70%; }
+ul.sub-menus li { float: left; width: 23%; margin: 0 1%; }
+
+}
+
+@media only screen and (min-width: 1500px) {
+/* 1500 Styles */
+.content { width: 80%; }
+ul.sub-menus li { float: left; width: 18%; margin: 0 1%; }
+
+}
+
+/* Print Styles */	
+@media print {
+    *{
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;}
+    a,
+    a:visited{
+        text-decoration: underline;}
+    a[href]:after{
+        content: " (" attr(href) ")";}
+    abbr[title]:after{
+        content: " (" attr(title) ")";}
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after{
+        content: "";}
+    pre,
+    blockquote{
+        border: 1px solid #999;
+        page-break-inside: avoid;}
+    thead {
+        display: table-header-group;}
+    tr,
+    img{
+        page-break-inside: avoid;}
+    img{
+        max-width: 100% !important;}
+    @page{
+        margin: 0.5cm;}
+    p,
+    h2,
+    h3{
+        orphans: 3;
+        widows: 3;}
+    h2,
+    h3{
+        page-break-after: avoid;}
+}

@@ -1,0 +1,1 @@
+<div class="search"><form id="google" method="get" action="https://www.google.com/search" autocomplete="on"><input type="text" class="gsearch" name="q" placeholder="Google Search..."></form><a href="#" class="sclose"><span class="icon-up-open"><em>CLOSE</em></span></a></div>
