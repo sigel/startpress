@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <html class="no-js" lang="en">
 <head>
-	<title><?php bloginfo('name'); ?></title>
+	<title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
 	<!--[if IE 6]><![endif]--> <!-- http://bit.ly/abHSdO -->
     <!-- Meta -->
 	<meta charset="utf-8">
@@ -113,3 +113,4 @@ $categories=get_categories($cat_args);
 					</div>
 		</div><!--Wrap-->
 	</header>
+<div class="page-wrap">

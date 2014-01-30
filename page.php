@@ -10,7 +10,7 @@
 	query_posts($args); if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<h1><?php the_title(); ?></h1>
 	<?php the_content(); ?>
-			<?php edit_post_link(__('Edit this entry.'), '<p>', '</p>'); ?>
+			<?php edit_post_link(__('<span class="icon-cog">EDIT PAGE</span>'), '<h2>', '</h2>'); ?>
 		<?php endwhile; endif; ?>
 		</div><!-- .content -->
 		<?php get_sidebar(); ?>

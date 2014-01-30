@@ -6,8 +6,6 @@
  */
  get_header(); ?>
 
-	<h2><?php _e('Error 404 - Page Not Found','html5reset'); ?></h2>
-
-<?php get_sidebar(); ?>
+	<div class="wrap"><h1>Error 404 - Page Not Found</h1></div>
 
 <?php get_footer(); ?>

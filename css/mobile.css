@@ -16,17 +16,10 @@ label,input[type="button"],input[type="submit"],input[type="image"],button{curso
 /* ------------------------------------
  Framework
 ------------------------------------- */
+html, body { height: 100%; }
 body {
 	font-family: 'Helvetica Neue', 'tahoma', san-serif;
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(239,239,239,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(239,239,239,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(239,239,239,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
-	background-color: #fff;
+	background-color: #eee;
 	color: #333;
 	font-size: 16px;
 	font-size: 1em;
@@ -38,6 +31,19 @@ a:hover, a:focus { color: #CCC; text-decoration: underline; }
 
 h1, h2 { font-family: 'Roboto', sans-serif; font-weight: 500; }
 h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; font-weight: 400; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -200px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.page-wrap:after {
+  height: 200px; 
+}
 
 .wrap { width: 96%; max-width: 1600px; padding: 0 2%; margin: 0 auto; }
 
@@ -206,7 +212,8 @@ span.rss-date {
 footer { 
 	clear: both; 
 	padding: 25px 0;
-	overflow: auto;
+	height: 150px;
+	overflow: hidden;
 	border-top: 6px solid #8bcc33;
 	background: #000;
 	-webkit-box-shadow: 0 0 27px rgba(0,0,0,0.25);

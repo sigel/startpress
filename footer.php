@@ -1,3 +1,4 @@
+</div> <!-- .page-wrap -->
 <footer>
 	<div class="wrap">
 		<div class="copyright"><p><a href="http://www.startpress.org">StartPress</a> Start Page (<? echo date('Y'); ?>) Powered by <a href="http://www.wordpress.org">WordPress</a></p></div>

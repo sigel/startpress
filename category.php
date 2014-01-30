@@ -15,7 +15,7 @@ if ( have_posts() ) : ?>
 		<h3 class="cat"><?php single_cat_title(); ?></h3>
 		<ul class="cat">
 			<?php while ( have_posts() ) : the_post(); ?>
-			<li<?php if ( !has_post_thumbnail() ) {  echo ' class="noimg"'; } ?>><a <?php if ( get_post_meta($post->ID, 'sp_modal') == "on" ) {  ?><?php echo 'class="modal" data-fancybox-type="iframe" ' ?><?php } ?>href="<?php if ( get_post_meta($post->ID, 'sp_url') == "on" ) {  ?><?php echo get_post_meta($post->ID, 'sp_url', true); ?><?php } ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" <?php if ( get_post_meta($post->ID, 'sp_new') == "on" ) {  ?><?php echo 'target="_blank"'; ?><?php } ?>><?php if ( has_post_thumbnail() ) {  echo get_the_post_thumbnail($post_id, 'thumbnail'); } ?><span><?php the_title(); ?></span></a></li>
+			<li<?php if ( !has_post_thumbnail() ) {  echo ' class="noimg"'; } ?>><a <?php if ( get_post_meta($post->ID, 'sp_modal', true) == "on" ) {  ?><?php echo 'class="modal" data-fancybox-type="iframe" ' ?><?php } ?>href="<?php if ( get_post_meta($post->ID, 'sp_url', true) ) {  ?><?php echo get_post_meta($post->ID, 'sp_url', true); ?><?php } ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" <?php if ( get_post_meta($post->ID, 'sp_new', true) == "on" ) {  ?><?php echo 'target="_blank"'; ?><?php } ?>><?php if ( has_post_thumbnail() ) {  echo get_the_post_thumbnail($post_id, 'thumbnail'); } ?><span><?php the_title(); ?></span></a></li>
           <?php endwhile; else: ?>
 		<h1>Sorry, No Bookmarks Available.</h1>
 <?php endif; ?>	
