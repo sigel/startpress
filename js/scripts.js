@@ -28,10 +28,11 @@
 		
 		//Fancybox
 		$(".modal").fancybox({
+		type	: 'iframe',
 		fitToView	: true,
-		width		: '95%',
+		width		: '90%',
 		maxWidth	: '1600px',
-		height		: '95%',
+		height		: '90%',
 		autoSize	: true,
 		closeClick	: true,
 		arrows  	: false,

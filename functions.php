@@ -6,7 +6,7 @@
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
 		register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 150, 150 );
+		add_image_size( 'bookmark-icon', 150, 150, false );
 	}
 	add_action( 'after_setup_theme', 'html5reset_setup' );
 	

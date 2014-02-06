@@ -78,6 +78,7 @@
 				</ul>
 				<ul class="sub-menus">
 					<h3>Categories</h3>
+					<li class="close-nav"><a title="Home" href="<?php echo get_site_url(); ?>"><span class="icon-home"></span> Home</a></li>
 					<?php
 					//for each category, show all posts
 					$cat_args=array(
@@ -99,7 +100,7 @@ $categories=get_categories($cat_args);
       } // if ($posts
     } // foreach($categories
 					?>
-					<li class="close-nav"><a title="Quicklinks" href="#quicklinks"><span class="icon-right-dir"></span> Quicklinks</a></li>
+					<li class="close-nav"><a title="Quicklinks" href="#quicklinks"><span class="icon-globe"></span> Quicklinks</a></li>
 					<div class="pageList"><?php 
 					$args = array(
 	'title_li' 	   => '<h3>Pages</h3>',
