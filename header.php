@@ -82,18 +82,25 @@
 					<?php
 					//for each category, show all posts
 					$cat_args=array(
+						'type' => 'bookmark',
+						'hide_empty' => 0,
 						'orderby' => 'name',
-  'order' => 'ASC'
-   );
+						'order' => 'ASC'
+					);
 $categories=get_categories($cat_args);
   foreach($categories as $category) {
     $args=array(
       'post_type' => 'bookmark',
+      'post_status' => array( 'publish' ),
       'posts_per_page' => -1,
       'category__in' => array($category->term_id),
       'order' => 'ASC',
       'orderby' => 'menu_order'
     );
+    // Show Private Bookmarks if logged in
+    if ( is_user_logged_in() ) {
+		$args['post_status'][] = 'private';
+	}
     $posts=get_posts($args);
       if ($posts) {
         echo '<li class="close-nav"><a href="/#' . $category->slug . '" title="' . sprintf( __( "View all Bookmarks in %s" ), $category->name ) . '" ' . '><span class="icon-right-dir"></span> ' . $category->name.'</a></li> ';

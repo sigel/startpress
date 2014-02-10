@@ -111,19 +111,29 @@ function cd_meta_box_cb( $post )
 	$sp_url = isset( $values['sp_url'] ) ? esc_attr( $values['sp_url'][0] ) : '';
 	$sp_new = isset( $values['sp_new'] ) ? esc_attr( $values['sp_new'][0] ) : '';
 	$sp_modal = isset( $values['sp_modal'] ) ? esc_attr( $values['sp_modal'][0] ) : '';
+	$sp_anon = isset( $values['sp_anon'] ) ? esc_attr( $values['sp_anon'][0] ) : '';
 	wp_nonce_field( 'my_meta_box_nonce', 'meta_box_nonce' );
 	?>
+	<h3>
+		<label for="sp_url">Website Address</label>
+	</h3>
 	<p>
-		<label for="sp_url">Website URL </label>
-		<input type="text" name="sp_url" id="sp_url" size="100%" value="<?php echo $sp_url; ?>" placeholder="http://" />
+		<input type="text" name="sp_url" id="sp_url" size="50" value="<?php echo $sp_url; ?>" placeholder="http://" />
 	</p>
+	<h3>
+		<label for="sp_url">Settings</label>
+	</h3>
 	<p>
 		<input type="checkbox" name="sp_new" id="sp_new" <?php checked( $sp_new, 'on' ); ?> />
-		<label for="sp_new">Open In New Window</label>
+		<label for="sp_new"> Open In New Window</label>
 	</p>
 	<p>
 		<input type="checkbox" name="sp_modal" id="sp_modal" <?php checked( $sp_modal, 'on' ); ?> />
-		<label for="sp_modal">Open In Modal</label>
+		<label for="sp_modal"> Open In Modal</label>
+	</p>
+	<p>
+		<input type="checkbox" name="sp_anon" id="sp_anon" <?php checked( $sp_anon, 'on' ); ?> />
+		<label for="sp_anon"> Derefer</label>
 	</p>
 	<?php	
 }
@@ -157,6 +167,8 @@ function cd_meta_box_save( $post_id )
 	update_post_meta( $post_id, 'sp_new', $chk );
 	$chk2 = ( isset( $_POST['sp_modal'] ) && $_POST['sp_modal'] ) ? 'on' : 'off';
 	update_post_meta( $post_id, 'sp_modal', $chk2 );
+	$chk3 = ( isset( $_POST['sp_anon'] ) && $_POST['sp_anon'] ) ? 'on' : 'off';
+	update_post_meta( $post_id, 'sp_anon', $chk3 );
 }
 
 // Order Categories by Wessley Roche
