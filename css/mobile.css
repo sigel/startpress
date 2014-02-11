@@ -190,6 +190,8 @@ a.goback:hover, a.goback:focus { color: #666; }
 .sidebar a { color: #666; }
 .sidebar a:hover, .sidebar a:focus { color: #8bcc33; text-decoration: none; }
 
+.sidebar table { width: 100%; }
+
 span.rss-date {
 	clear: both;
 	display: block;
@@ -259,6 +261,9 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto }
 .wp-caption.alignright { margin: 5px 0 20px 20px; }
 .wp-caption img { border: 0 none; height: auto; margin: 0; max-width: 98.5%; padding: 0; width: auto; }
 .wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px; }
+
+/* Calendar Widget */
+#today { background: #000; color: #eee; }
 
 /* ------------------------------------
  Icons
