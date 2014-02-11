@@ -126,8 +126,8 @@ ul.cat li {
 	display: block; 
 	float: left; 
 	margin: 3px 6px 6px 0; 
-	width: 150px;
-	height: 150px; 
+	width: 75px;
+	height: 75px; 
 	overflow: hidden;
 	-moz-box-shadow: 0px 10px 14px -7px #cacaca;
 	-webkit-box-shadow: 0px 10px 14px -7px #cacaca;
@@ -149,24 +149,17 @@ ul.cat li {
 	color:#a6a6a6;
 	text-shadow:0px 1px 0px #ffffff;
 	}
-ul.cat li:hover, ul.cat li:focus { border-color: #eee; }
+ul.cat li:hover, ul.cat li:focus { border-color: transparent; }
 ul.cat li.noimg { background: url('../img/noimg.png') center center no-repeat #eee; }
-ul.cat li a { display: block; line-height: 150px; text-align: center; font-family: 'Raleway', sans-serif; color: #333; text-shadow:0px 1px 0px #fff; }
+ul.cat li a { display: block; line-height: 75px; text-align: center; font-family: 'Raleway', sans-serif; color: #333; text-shadow:0px 1px 0px #fff; -webkit-transition: all 1.2s ease; -moz-transition: all 1.2s ease; -o-transition: all 1.2s ease; -ms-transition: all 1.2s ease; transition: all 1.2s ease; }
 ul.cat li a:hover, ul.cat li a:focus { 
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eeeeee), color-stop(1, #cccccc));
-	background:-moz-linear-gradient(top, #eeeeee 5%, #cccccc 100%);
-	background:-webkit-linear-gradient(top, #eeeeee 5%, #cccccc 100%);
-	background:-o-linear-gradient(top, #eeeeee 5%, #cccccc 100%);
-	background:-ms-linear-gradient(top, #eeeeee 5%, #cccccc 100%);
-	background:linear-gradient(to bottom, #eeeeee 5%, #cccccc 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0);
-	background-color:#eeeeee;
+	background: #333333;
 	color: #eee; 
 	text-decoration: none; 
 	text-shadow: 1px 1px 1px #333; 
 	}
 ul.cat li a:active {position:relative; top:1px; }
-ul.cat li img { vertical-align: middle; }
+ul.cat li img { vertical-align: middle; width: 100%; height: 100%; }
 ul.cat li span { position: relative; display: block; }
 
 .pageList ul { display: block; clear: both; margin: 0; padding: 0 }

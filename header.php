@@ -65,20 +65,20 @@
 	<header>
 		<?php get_search_form(); ?> 
 		<div class="wrap">
-			<div class="logo"><a href="#" class="top-item"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png"></a></div>
+			<div class="logo"><a href="#" class="fx top-item"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png"></a></div>
 				<ul class="myaccount">
-							<li><a href="#" class="btnSearch"><span class="icon-search"></span> <em>Search</em></a></li>
+							<li><a href="#" class="fx btnSearch"><span class="icon-search"></span> <em>Search</em></a></li>
 					<?php
 						if ( is_user_logged_in() ) { ?>
-							<li><a href="/wp-admin/edit.php?post_type=bookmark" class="modal" data-fancybox-type="iframe"><span class="icon-cog"></span> <em>Manage</em></a></li>
-							<li><a href="/wp-login.php?action=logout"><span class="icon-off"></span> <em>Logout</em></a></li>
+							<li><a href="/wp-admin/edit.php?post_type=bookmark" class="fx modal" data-fancybox-type="iframe"><span class="icon-cog"></span> <em>Manage</em></a></li>
+							<li><a href="/wp-login.php?action=logout" class="fx"><span class="icon-off"></span> <em>Logout</em></a></li>
 						<? } else { ?>
-							<li><a href="/wp-admin/" class="modal" data-fancybox-type="iframe"><span class="icon-off"></span> <em>Login</em></a></li>
+							<li><a href="/wp-admin/" class="fx modal" data-fancybox-type="iframe"><span class="icon-off"></span> <em>Login</em></a></li>
 					<? } ?>
 				</ul>
 				<ul class="sub-menus">
 					<h3>Categories</h3>
-					<li class="close-nav"><a title="Home" href="<?php echo get_site_url(); ?>"><span class="icon-home"></span> Home</a></li>
+					<li class="close-nav"><a title="Home" class="fx" href="<?php echo get_site_url(); ?>"><span class="icon-home"></span> Home</a></li>
 					<?php
 					//for each category, show all posts
 					$cat_args=array(
@@ -103,11 +103,11 @@ $categories=get_categories($cat_args);
 	}
     $posts=get_posts($args);
       if ($posts) {
-        echo '<li class="close-nav"><a href="/#' . $category->slug . '" title="' . sprintf( __( "View all Bookmarks in %s" ), $category->name ) . '" ' . '><span class="icon-right-dir"></span> ' . $category->name.'</a></li> ';
+        echo '<li class="close-nav"><a class="fx" href="/#' . $category->slug . '" title="' . sprintf( __( "View all Bookmarks in %s" ), $category->name ) . '" ' . '><span class="icon-right-dir"></span> ' . $category->name.'</a></li> ';
       } // if ($posts
     } // foreach($categories
 					?>
-					<li class="close-nav"><a title="Quicklinks" href="#quicklinks"><span class="icon-globe"></span> Quicklinks</a></li>
+					<li class="close-nav"><a title="Quicklinks" class="fx" href="#quicklinks"><span class="icon-globe"></span> Quicklinks</a></li>
 					<div class="pageList"><?php 
 					$args = array(
 	'title_li' 	   => '<h3>Pages</h3>',
@@ -117,7 +117,7 @@ $categories=get_categories($cat_args);
 	'sort_column'  => 'menu_order, post_title'
 	);
 					wp_list_pages($args); ?>
-					<a href="#" class="close-nav"><span class="icon-up-open"></span> CLOSE </a>
+					<a href="#" class="fx close-nav"><span class="icon-up-open"></span> CLOSE </a>
 					</div>
 		</div><!--Wrap-->
 	</header>

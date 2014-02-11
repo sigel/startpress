@@ -16,6 +16,8 @@ ul.myaccount a em { display: inline-block; font-style: normal; }
  Bookmarks
 ------------------------------------- */
 h3.cat { width: 98.5%; }
+ul.cat li { width: 150px; height: 150px; }
+ul.cat li a { display: block; line-height: 150px; }
 
 /* ------------------------------------
  Content
