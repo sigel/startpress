@@ -428,7 +428,7 @@ function wpguy_category_order_init() {
 
 add_action('init', 'wpguy_category_order_init');
 // Sidebar
-//add_action('widgets_init', 'spsidebar');
+add_action('widgets_init', 'spsidebar');
 
 function spsidebar() {
     register_sidebar(
@@ -462,10 +462,10 @@ function footer_enqueue_scripts() {
     remove_action('wp_head', 'wp_print_scripts');
     remove_action('wp_head', 'wp_print_head_scripts', 9);
     remove_action('wp_head', 'wp_enqueue_scripts', 1);
-    //add_action('wp_footer', 'wp_print_scripts', 5);
-    //add_action('wp_footer', 'wp_enqueue_scripts', 5);
-    //add_action('wp_footer', 'wp_print_head_scripts', 5);
+    add_action('wp_footer', 'wp_print_scripts', 5);
+    add_action('wp_footer', 'wp_enqueue_scripts', 5);
+    add_action('wp_footer', 'wp_print_head_scripts', 5);
 }
 
-//add_action('after_setup_theme', 'footer_enqueue_scripts');
+add_action('after_setup_theme', 'footer_enqueue_scripts');
 ?>
